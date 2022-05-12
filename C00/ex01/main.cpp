@@ -16,8 +16,6 @@ int	main(void)
 			phonebook.search();
 		else if (!input.compare("EXIT"))
 			return (0);
-		else
-			std::cout << "Unvalid argument" << std::endl;
 	}
 	return (0);
 }

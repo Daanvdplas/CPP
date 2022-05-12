@@ -8,15 +8,15 @@ void	Phonebook::add(void)
 {
 	Contact	new_contact;
 
-	std::cout << "Please enter the first name";
+	std::cout << "Please enter the first name: ";
 	getline(std::cin, new_contact.first_name);
-	std::cout << "Please enter the last name";
+	std::cout << "Please enter the last name: ";
 	getline(std::cin, new_contact.last_name);
-	std::cout << "Please enter the nickname";
+	std::cout << "Please enter the nickname: ";
 	getline(std::cin, new_contact.nickname);
-	std::cout << "Please enter the phone number";
-	getline(std::cin, new_contact.nickname);
-	std::cout << "Please enter the darkest secret";
+	std::cout << "Pleasse enter the phone number: ";
+	getline(std::cin, new_contact.phone_number);
+	std::cout << "Please enter the darkest secret: ";
 	getline(std::cin, new_contact.darkest_secret);
 	if (contact_index == 8)
 		contact_index = 0;
@@ -47,7 +47,7 @@ int		Phonebook::get_index(int contacts_len)
 {
 	int	index;
 
-	std::cout << "Please enter contact index" << std::endl;
+	std::cout << "Please enter contact index: " << std::endl;
 	std::cin >> index;
 	if (std::cin.fail())
 	{
@@ -79,7 +79,7 @@ void	Phonebook::search(void)
 	}
 	for (int i = 0; i < 8; i++)
 	{
-		if (!contacts[0].first_name[0])
+		if (!contacts[i].first_name[0])
 		{
 			contacts_len = i - 1;
 			break ;

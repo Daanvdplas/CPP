@@ -9,7 +9,6 @@ struct Contact
 	std::string		phone_number;
 	std::string		darkest_secret;
 	unsigned int	index;
-	unsigned int	member;
 };
 
 #endif
