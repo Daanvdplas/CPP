@@ -18,6 +18,10 @@ void	Phonebook::add(void)
 	getline(std::cin, new_contact.phone_number);
 	std::cout << "Please enter the darkest secret: ";
 	getline(std::cin, new_contact.darkest_secret);
+	if (!new_contact.first_name[0] || !new_contact.last_name[0]\
+			|| !new_contact.nickname[0] || !new_contact.phone_number[0]\
+			|| !new_contact.darkest_secret[0])
+		return;
 	if (contact_index == 8)
 		contact_index = 0;
 	new_contact.index = contact_index;
