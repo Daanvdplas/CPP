@@ -10,7 +10,7 @@ Fixed::Fixed(void)
 Fixed::Fixed(const Fixed &object)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	setRawBits(object.getRawBits());
+	*this = object;
 }
 
 Fixed &Fixed::operator=(const Fixed &object)
@@ -25,6 +25,8 @@ Fixed::~Fixed(void)
 	std::cout << "Destructor called" << std::endl;
 }
 
+// Due to the const behind the function, this class function is not 
+// allowed to change a member variable of the class.
 int Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
@@ -33,6 +35,5 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
-	std::cout << "setRawBits member function called" << std::endl;
 	_fp_nbr = raw;
 }
