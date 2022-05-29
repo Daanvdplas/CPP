@@ -1,16 +1,16 @@
-#include "Claptrap.hpp"
+#include "ClapTrap.hpp"
 
 int main() {
-	ClapTrap a("AAA");
-	ClapTrap b("BEEEEE");
+	ClapTrap a("Daan");
+	ClapTrap b("enemy");
 	ClapTrap c(a);
 	ClapTrap d;
 
 	d = c;
 
 	for (int i = 0; i < 12; i++) {
-		a.attack("Bloe");
-		b.attack("Bla");
+		a.attack("enemy");
+		b.attack("Daan");
 		a.takeDamage(1);
 		a.beRepaired(2);
 		b.takeDamage(2);
@@ -18,3 +18,4 @@ int main() {
 	}
 	c.attack("Bloebla");
 	d.attack("Blaaaaaaaa");
+}

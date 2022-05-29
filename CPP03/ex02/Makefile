@@ -1,6 +1,6 @@
-NAME = ft_ex00
-SRC = ClapTrap.cpp  main.cpp
-INC = ClapTrap.hpp
+NAME = ft_ex02
+SRC = ClapTrap.cpp ScavTrap.cpp main.cpp FragTrap.cpp
+INC = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 ifdef DEBUG
 	CC=clang++
